@@ -1,3 +1,4 @@
+<% @activity.tags.build %>
 <%= form_for(@activity) do |f| %>
   <% if @activity.errors.any? %>
     <div id="error_explanation">
@@ -27,6 +28,8 @@
     <%= f.label :end_time %><br />
     <%= f.datetime_select :end_time %>
   </div>
+  <%= render :partial => 'tags/form',
+             :locals  => {:form => f} %>
   <div class="actions">
     <%= f.submit %>
   </div>
