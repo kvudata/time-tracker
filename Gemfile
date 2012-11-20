@@ -36,3 +36,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# TODO figure out how to specify wirble only for development in rails
+gem 'wirble' # colorful console output
+
+# use thin webserver rather than WEBrick
+gem 'thin'

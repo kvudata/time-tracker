@@ -1,4 +1,8 @@
 class ActivitiesController < ApplicationController
+
+  # TODO proper authentication without a clear text password in the source
+  http_basic_authenticate_with :name => "kv", :password => "lepassword", :except => [:index, :show]
+
   # GET /activities
   # GET /activities.json
   def index
